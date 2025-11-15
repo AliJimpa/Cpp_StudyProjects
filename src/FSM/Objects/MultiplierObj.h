@@ -1,19 +1,20 @@
 #pragma once
 #include "Object.h"
 
-class Multiplier : public Object
+class MultiplierObj : public Object
 {
 public:
-    Multiplier()
+    MultiplierObj()
     {
         tick = false;
     }
     void OnBegin() override
     {
         PRINT("/////////////////////  Multiplier");
-        int value;
-        INPUT("Number", value);
-        std::cout << "You entered: " << value << std::endl;
+        int value1 , value2;
+        INPUT("Number A", value1);
+         INPUT("Number B", value2);
+        std::cout << "You entered: " << value1 * value2 << std::endl;
         PRINT(REMOVEOBJECT(this));
     }
     void OnUpdate() override

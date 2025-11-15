@@ -1,6 +1,6 @@
 #pragma once
 #include "Object.h"
-#include "Multiplier.h"
+#include "MultiplierObj.h"
 #include "Application.h"
 
 class App : public Object
@@ -25,7 +25,7 @@ public:
         }
         if(argoment == "Multi")
         {
-            CREATEOBJECT(Multiplier);
+            CREATEOBJECT(MultiplierObj);
             return;
         }
         PRINT(argoment << ": NotDefine");

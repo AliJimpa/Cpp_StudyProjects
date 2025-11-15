@@ -11,20 +11,38 @@ This project contains:
 - Notes, references, and best practices  
 - A clean and organized folder structure for easy navigation
   
-The goal is to become highly comfortable with C++, then move toward **real-time rendering**, graphics APIs, and engine-level implementation.
 ## 📁 Project Structure
+Any project in this repo is based on this folder structure and by default has a VSCode task for compiling with Cl
 ```bash
-ProjectRoot/
-├─ Content/
-│ ├─ GeometryExample/
-│ ├─ Polydin/
-├─ Plugins/
-│ ├─ AICore/
-│ ├─ Command_Pattern/
-│ ├─ HitmapCore/
-│ ├─ QuestSystem/
-│ ├─ SimpleAISystem/
-└─ ...
+ProjectName/
+│
+├── src/                → All .cpp source files
+│   ├── core/
+│   ├── systems/
+│   ├── utils/
+│   └── main.cpp
+│
+├── include/            → All .h / .hpp header files (public)
+│   └── ProjectName/
+│       ├── core/
+│       ├── systems/
+│       └── utils/
+│
+├── libs/               → Third-party static libraries (.lib, .a)
+│
+├── external/           → Third-party source (e.g., glm, SDL, imgui)
+│
+├── assets/             → (Optional) for game dev: audio, textures, models
+│
+├── build/              → Build output (not committed to git)
+│
+├── tests/              → Unit tests
+│
+├── cmake/              → CMake scripts (if you use CMake)
+│
+├── docs/               → Documentation
+│
+└── CMakeLists.txt      → Build configuration (if using CMake)
 ```
 > *(You can adjust the structure to match your actual folders.)*
 ## ✨ Features

@@ -13,4 +13,5 @@ extern void NonStaticFunction();
 int main()
 {
     LOG(insidevariable);
+    //LOG(s_Variable);
 }

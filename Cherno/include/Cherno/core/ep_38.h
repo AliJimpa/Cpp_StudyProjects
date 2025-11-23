@@ -19,13 +19,14 @@ int main()
 {
     int a = 2;
     int *b = new int[50]; // 200 bytes
+	int *c = new int(5);  // 4 bytes
 
     Entity* e = new Entity();
     Entity* e1 = (Entity*)malloc(sizeof(Entity)); // malloc is function that allocate memory by size
     
     LOG(e->GetName());
-    LOG(e1->GetName());
+	//LOG(e1->GetName()); e1 is not initialized, may cause crash , because malloc just allocate memory but not call constructor
 
-    delete a;
+    delete c;
     delete[] b;
 }
